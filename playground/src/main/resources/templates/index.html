@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	{{^loginedUser}}
+	<form method="post" action="/signup">
+		email : <input type="email" name="email" placeholder="test@gmail.com">
+		<br> password <input type="password" name="password"
+			value="1234567890a"> <br> password check : <input
+			type="password" name="passwordCheck" value="1234567890a"> <br>
+		<input type="submit" value="계정 생성">
+	</form>
+	<br>
+	<form method="post" action="/signin">
+		email : <input type="email" name="email" placeholder="test@gmail.com">
+		<br> password <input type="password" name="password"
+			value="1234567890a"> <br> <input type="submit"
+			value="login">
+	</form>
+	{{/loginedUser}} {{#loginedUser}}
+	<form method="post" action="/signout">
+		<input type="submit" value="logout">
+	</form>
+	{{/loginedUser}}
+</body>
+</html>
