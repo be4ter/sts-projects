@@ -34,8 +34,7 @@
      요구사항에 맞게 회원정보를 입력한다.  
   2. ![회원 가입 실패](https://user-images.githubusercontent.com/41373848/44618139-2ea15880-a8ab-11e8-9c26-f7cabed14a4b.png)  
       회원가입 정보가 일치하지 않으면 exception 내용을 서버에 알리면 실패 페이지로 넘어간다.  
-  3. ![회원 가입 성공](https://user-images.githubusercontent.com/41373848/44618152-66100500-a8ab-11e8-9072-1d163920d2b7.png)  
-     성공 페이지로 넘어가면 입력했던 email주소로 메일이 발송된다.  
+  3.  성공 페이지로 넘어가면 입력했던 email주소로 메일이 발송된다.  
      ![gmail](https://user-images.githubusercontent.com/41373848/44618152-66100500-a8ab-11e8-9072-1d163920d2b7.png)  
      ![contents](https://user-images.githubusercontent.com/41373848/44618153-67d9c880-a8ab-11e8-84f4-2d78d21cc164.png)  
       ![인증 성공](https://user-images.githubusercontent.com/41373848/44618158-77591180-a8ab-11e8-8870-5a60eadfc300.png)  
