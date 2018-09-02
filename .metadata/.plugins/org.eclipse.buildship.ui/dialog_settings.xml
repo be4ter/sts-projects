@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.buildship.ui.wizard.project.import">
+		<item value="VERSION" key="gradle_distribution_type"/>
+		<item value="true" key="apply_working_sets"/>
+		<item value="4.10" key="gradle_distribution_configuration"/>
+		<item value="/Users/won.s.h/Downloads/spring-5-recipes-master 2/spring-recipes-4th/ch01/recipe_1_6" key="project_location"/>
+		<list key="working_sets">
+		</list>
+	</section>
+</section>

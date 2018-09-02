@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/Users/won.s.h/Downloads/introducing-spring-framework-master/kr/14-tutorial/mrs"/>
+			<item value="/Users/won.s.h/Downloads/introducing-spring-framework-master/kr/14-tutorial"/>
+			<item value="/Users/won.s.h/developments/gs-accessing-facebook/initial"/>
+			<item value="/Users/won.s.h/Downloads/re-board"/>
+			<item value="/Users/won.s.h/Downloads/board"/>
+			<item value="/Users/won.s.h/developments/seunghwan"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>
