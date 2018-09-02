@@ -1,4 +1,4 @@
-package kr.recipes;
+package kr;
 
 import java.io.IOException;
 import java.util.Date;
@@ -48,15 +48,9 @@ public class RecipesApplication {
 		logger.debug("shopping cart 2 contains : " + cart2.getItems());
 		logger.warn(properties.toString());
 
-		String alert = context.getMessage("alert.checkout", null, Locale.US);
-		String alert_inventory = context.getMessage("alert.inventory.checkout",
-				new Object[] { "[DVD-RW 3.0]", new Date() }, Locale.US);
-
-		logger.debug("alert : " + alert);
-		logger.debug("alert_inventory : " + alert_inventory);
-
 		Cashier cashier = context.getBean("cashier", Cashier.class);
 		cashier.checkout(cart1);
 		cashier.checkout(cart2);
+
 	}
 }

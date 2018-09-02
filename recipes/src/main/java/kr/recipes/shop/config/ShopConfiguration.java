@@ -7,15 +7,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.io.Resource;
 
-import kr.recipes.shop.BannerLoader;
 import kr.recipes.shop.domain.Battery;
-import kr.recipes.shop.domain.Cashier;
 import kr.recipes.shop.domain.Disc;
-import kr.recipes.shop.domain.Product;
+import kr.recipes.shop.domain.baen.DiscountFactoryBean;
 
 @Configuration
 @PropertySource("classpath:discount.properties")
@@ -29,57 +25,44 @@ public class ShopConfiguration {
 	private Resource banner;
 
 	@Bean
-	public Product aaa() {
-		Battery battery = new Battery();
-		battery.setName("AAA");
-		battery.setPrice(2.5);
-		battery.setRechargeable(true);
-		return battery;
+	public Battery aaa() {
+		Battery aaa = new Battery("AAA", 2.5);
+		return aaa;
 	}
 
 	@Bean
-	public Product cdrw() {
-		Disc disc = new Disc("CD-RW", 3.0, specialEndofyearDiscountField);
-		disc.setCapacity(700);
-		return disc;
+	public Disc cdrw() {
+		Disc aaa = new Disc("CD-RW", 1.5);
+		return aaa;
 	}
 
 	@Bean
-	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-		return new PropertySourcesPlaceholderConfigurer();
+	public Disc dvdrw() {
+		Disc aaa = new Disc("DVD-RW", 3.0);
+		return aaa;
 	}
 
 	@Bean
-	public Product dvdrw() {
-		Disc disc = new Disc();
-		disc.setName("DVD-RW");
-		disc.setPrice(1.5);
-		disc.setCapacity(700);
-		return disc;
+	public DiscountFactoryBean discountFactoryBeanAAA() {
+		DiscountFactoryBean factory = new DiscountFactoryBean();
+		factory.setProduct(aaa());
+		factory.setDiscount(0.2);
+		return factory;
 	}
 
 	@Bean
-	public BannerLoader bannerLoader() {
-		BannerLoader bannerLoadder = new BannerLoader();
-		bannerLoadder.setBanner(banner);
-		return bannerLoadder;
+	public DiscountFactoryBean discountFactoryBeanCDRW() {
+		DiscountFactoryBean factory = new DiscountFactoryBean();
+		factory.setProduct(cdrw());
+		factory.setDiscount(0.1);
+		return factory;
 	}
 
 	@Bean
-	public ReloadableResourceBundleMessageSource messageSource() {
-		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-		messageSource.setBasename("classpath:messages");
-		messageSource.setCacheSeconds(1);
-		return messageSource;
-	}
-
-	@Bean
-	public Cashier cashier() {
-		String path = System.getProperty("java.io.tmpdir") + "/cashier";
-		Cashier cashier = new Cashier();
-		cashier.setFileName("checkout");
-		cashier.setPath(path);
-		logger.debug("path : " + path);
-		return cashier;
+	public DiscountFactoryBean discountFactoryBeanDVDRW() {
+		DiscountFactoryBean factory = new DiscountFactoryBean();
+		factory.setProduct(dvdrw());
+		factory.setDiscount(0.1);
+		return factory;
 	}
 }

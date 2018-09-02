@@ -31,4 +31,8 @@ public abstract class Product {
 		return name;
 	}
 
+	public double getPrice() {
+		return price;
+	}
+
 }
