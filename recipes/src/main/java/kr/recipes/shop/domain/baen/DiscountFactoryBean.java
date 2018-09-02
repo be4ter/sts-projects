@@ -7,15 +7,15 @@ import kr.recipes.shop.domain.Product;
 public class DiscountFactoryBean extends AbstractFactoryBean<Product> {
 	private Product product;
 	private double discount;
-	
+
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-	
+
 	public void setDiscount(double discount) {
 		this.discount = discount;
 	}
-	
+
 	@Override
 	public Class<?> getObjectType() {
 		return product.getClass();
